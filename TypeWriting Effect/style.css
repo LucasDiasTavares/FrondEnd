@@ -1,0 +1,39 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.apresentacao{
+  display: flex;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+  url("https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-size: cover;
+}
+
+.escrevendo{
+  position: relative;
+  margin-left: 10px;
+}
+
+/*Risquinho branco*/
+.escrevendo::after{
+  content: '';
+  position: absolute;
+  right: -5px
+  width: 1px;
+  height: 6%;
+  border-right: 2px solid white;
+  animation: blink .5s infinite ease;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
